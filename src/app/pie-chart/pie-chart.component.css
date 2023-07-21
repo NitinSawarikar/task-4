@@ -1,0 +1,22 @@
+#myChart{
+    margin-top : 40px;
+    width : 500px;
+    height: 500px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.row{
+    margin: 0 auto;
+}
+
+.ml-auto{
+    margin: 0 auto;
+    text-align: center;
+}

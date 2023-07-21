@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-8 mt-4">
+            <h1 class="ml-auto">Pie Chart</h1>
+
+            <form [formGroup]="inputForm" (ngSubmit)="onSubmit()">
+                <div class="d-flex mt-3">
+                    <input type="number" placeholder="value-1" max="100" formControlName="inputOne" class="form-control">
+                    <span *ngIf="inputForm.get('inputOne')?.invalid && inputForm.get('inputOne')?.touched">
+                        Please Enter a value below 100...
+                    </span>
+                        
+                    <input type="number" placeholder="value-2" formControlName="inputTwo" class="form-control ml-2">
+                </div>
+                <input type="submit" class="btn btn-sm btn-primary mt-3 ml-3">
+                <input type="button" value="clear" class="btn btn-sm btn-danger mt-3 ml-2" (click)="onClickClear()">
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="col-12">
+    <div class="chart-container">
+        <canvas id="myChart" #myChartCanvas></canvas>
+    </div>
+</div>
